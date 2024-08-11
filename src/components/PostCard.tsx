@@ -15,7 +15,7 @@ const PostCard = ({ post }: Props) => {
       <div className="flex justify-end gap-2">
         <Button>
           <Icon icon="mingcute:large-arrow-up-line" className="w-5 h-5 mr-2" />
-          <span className="m-0">{post.upVote}</span>
+          <span>{post.upVote}</span>
         </Button>
         <Button color="bg-red-500" hoverColor="hover:bg-red-700">
           <Icon
