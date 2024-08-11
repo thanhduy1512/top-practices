@@ -17,7 +17,7 @@ export const DATA_POSTS: IPost[] = [
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptatibus accusantium omnis tempora voluptates natus, consequuntur nulla earum adipisci. Pariatur cupiditate tempore molestiae assumenda ullam dolorum ea quas porro voluptatibus!",
     createdDate: "2022-01-01",
-    category: ["react", "api"],
+    category: ["react", "angular", "nest", "express"],
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const DATA_POSTS: IPost[] = [
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptatibus accusantium omnis tempora voluptates natus, consequuntur nulla earum adipisci. Pariatur cupiditate tempore molestiae assumenda ullam dolorum ea quas porro voluptatibus!",
     createdDate: "2022-01-01",
-    category: ["react", "api"],
+    category: ["dotnet", "mongodb", "mysql", "postgresql"],
   },
   {
     id: 3,
@@ -37,6 +37,16 @@ export const DATA_POSTS: IPost[] = [
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptatibus accusantium omnis tempora voluptates natus, consequuntur nulla earum adipisci. Pariatur cupiditate tempore molestiae assumenda ullam dolorum ea quas porro voluptatibus!",
     createdDate: "2022-01-01",
-    category: ["react", "api"],
+    category: ["vue", "astro", "svelte"],
+  },
+  {
+    id: 4,
+    title: "Call Api",
+    upVote: 10,
+    downVote: 5,
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptatibus accusantium omnis tempora voluptates natus, consequuntur nulla earum adipisci. Pariatur cupiditate tempore molestiae assumenda ullam dolorum ea quas porro voluptatibus!",
+    createdDate: "2022-01-01",
+    category: ["vue", "astro", "svelte"],
   },
 ];

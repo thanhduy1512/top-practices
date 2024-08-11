@@ -1,5 +1,5 @@
 import { DATA_POSTS } from "./data";
-import PostCard from "./PostCard";
+import PostCard from "./post/PostCard";
 
 const LeaderBoard = () => {
   return (
