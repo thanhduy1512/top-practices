@@ -14,21 +14,21 @@ const PostCard = ({ post }: Props) => {
       <p className="truncate-text">{post.content}</p>
       <p className="text-gray-500">{post.createdDate}</p>
       <div className="flex justify-between items-center">
-        <StackBar stacks={post.category} />
+        <StackBar stacks={post.stacks} />
         <div className="flex justify-end gap-2">
           <Button>
             <Icon
               icon="mingcute:large-arrow-up-line"
               className="w-5 h-5 mr-2"
             />
-            <span>{post.upVote}</span>
+            <span>{post.upVotes}</span>
           </Button>
           <Button color="bg-red-500" hoverColor="hover:bg-red-700">
             <Icon
               icon="mingcute:large-arrow-down-line"
               className="w-5 h-5 mr-2"
             />
-            <span>{post.downVote}</span>
+            <span>{post.downVotes}</span>
           </Button>
         </div>
       </div>
