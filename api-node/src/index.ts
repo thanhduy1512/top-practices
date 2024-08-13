@@ -2,6 +2,9 @@ import express from "express";
 import { connectDB } from "./config";
 import userRoutes from "./routes/userRoutes";
 import postRoutes from "./routes/postRoutes";
+import categoryRoutes from "./routes/categoryRoutes";
+import stackRoutes from "./routes/stackRoutes";
+import voteRoutes from "./routes/voteRoutes";
 
 const app = express();
 const port = 3000;
@@ -17,6 +20,9 @@ app.get("/", (_, res) => {
 
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
+app.use("/categories", categoryRoutes);
+app.use("/stacks", stackRoutes);
+app.use("/votes", voteRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
