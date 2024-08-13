@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Tooltip from "../ui/Tooltip";
 
 const iconMapping = {
   react: "logos:react",
@@ -23,11 +24,10 @@ const StackBar = ({ stacks }: Props) => {
       {stacks.map((stack, index) => {
         const icon = iconMapping[stack as keyof typeof iconMapping];
         return icon ? (
-          <div key={index} className="flex items-center relative group">
-            <Icon icon={icon} className="w-8 h-8" />
-            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-max p-2 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              {stack}
-            </div>
+          <div key={index}>
+            <Tooltip tooltipText={stack}>
+              <Icon icon={icon} className="w-8 h-8" />
+            </Tooltip>
           </div>
         ) : null;
       })}

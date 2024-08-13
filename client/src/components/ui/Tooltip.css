@@ -1,0 +1,47 @@
+:root {
+    --tooltip-background: #1f2937;
+    /* Equivalent to gray-800 in Tailwind */
+    --tooltip-border: #374151;
+    /* Equivalent to gray-700 in Tailwind */
+    --arrow-background: #1f2937;
+    /* Equivalent to gray-800 */
+    --arrow-border: #374151;
+    /* Equivalent to gray-700 */
+    --arrow-size: 5px;
+    /* Adjust the size of the arrow */
+    --arrow-border-size: 6.5px;
+    /* Adjust the size of the arrow border */
+}
+
+.arrow_box {
+    background: var(--tooltip-background);
+    border: 1px solid var(--tooltip-border);
+}
+
+.arrow_box:after,
+.arrow_box:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow_box:after {
+    border-color: transparent;
+    /* Transparent color */
+    border-top-color: var(--arrow-background);
+    border-width: var(--arrow-size);
+    margin-left: calc(-1 * var(--arrow-size));
+}
+
+.arrow_box:before {
+    border-color: transparent;
+    /* Transparent color */
+    border-top-color: var(--arrow-border);
+    border-width: var(--arrow-border-size);
+    margin-left: calc(-1 * var(--arrow-border-size));
+}
