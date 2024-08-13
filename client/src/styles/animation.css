@@ -1,0 +1,25 @@
+@keyframes emoji-fall {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(calc(var(--random-offset)), -30px) rotate(calc(var(--random-rotation)));
+        /* transform: translate(calc(var(--random-offset)), -30px) rotate(-20deg); */
+        /* Quick pop out with random horizontal offset */
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(calc(var(--random-offset)), 100vh) rotate(90deg);
+        /* Fall down */
+    }
+}
+
+.emoji-rain .emoji {
+    position: absolute;
+    animation: emoji-fall 2s ease-in forwards;
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    /* Ease-in-out curve */
+}

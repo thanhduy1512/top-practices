@@ -16,14 +16,14 @@ const PostCard = ({ post }: Props) => {
       <div className="flex justify-between items-center">
         <StackBar stacks={post.stacks} />
         <div className="flex justify-end gap-2">
-          <Button>
+          <Button icon="🎉">
             <Icon
               icon="mingcute:large-arrow-up-line"
               className="w-5 h-5 mr-2"
             />
             <span>{post.upVotes}</span>
           </Button>
-          <Button color="bg-red-500" hoverColor="hover:bg-red-700">
+          <Button icon="😡" color="bg-red-500" hoverColor="hover:bg-red-700">
             <Icon
               icon="mingcute:large-arrow-down-line"
               className="w-5 h-5 mr-2"
