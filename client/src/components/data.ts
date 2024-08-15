@@ -1,4 +1,4 @@
-export interface IPost {
+export interface IPostDummy {
   id: number;
   title: string;
   upVotes: number;
@@ -10,7 +10,7 @@ export interface IPost {
   stacks: string[];
 }
 
-export const DATA_POSTS: IPost[] = [
+export const DATA_POSTS: IPostDummy[] = [
   {
     id: 1,
     title: "Call Api",

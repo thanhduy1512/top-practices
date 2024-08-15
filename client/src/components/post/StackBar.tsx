@@ -16,16 +16,17 @@ const iconMapping = {
 };
 
 interface Props {
-  stacks: string[];
+  stacks?: string[];
 }
 const StackBar = ({ stacks }: Props) => {
   return (
     <div className="flex gap-2">
-      {stacks.map((stack, index) => {
-        const icon = iconMapping[stack as keyof typeof iconMapping];
+      {stacks?.map((stack, index) => {
+        const icon =
+          iconMapping[stack?.toLowerCase() as keyof typeof iconMapping];
         return icon ? (
           <div key={index}>
-            <Tooltip tooltipText={stack}>
+            <Tooltip tooltipText={stack ?? ""}>
               <Icon icon={icon} className="w-8 h-8" />
             </Tooltip>
           </div>
